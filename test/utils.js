@@ -5,7 +5,7 @@ const brokenCapabilities = {
     'browserVersion': 'latest',
     'sauce:options': {
         'name': 'Broken Google Search',
-        'screenResolution': '1280x960',
+        'screenResolution': '1920x1440',
         'build': process.env.GITLAB_CI ? `${process.env.CI_JOB_NAME}-${date}` : `support-tech-test-${date}`
     }
 };
@@ -17,6 +17,7 @@ const workingCapabilities = {
     'sauce:options': {
         'name': 'Guinea-Pig Sauce',
         'screenResolution': '1280x960',
+        'tags': ['guinea-pig-test', 'selenium-test', 'sauce-test'], // Tags to add to each test
         'build': process.env.GITLAB_CI ? `${process.env.CI_JOB_NAME}-${date}` : `support-tech-test-${date}`
     }
 };
